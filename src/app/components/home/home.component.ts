@@ -16,9 +16,9 @@ export class HomeComponent {
   businessName = 'Sanskruti Enterprises';
   tagline = 'Making Your Garden Green & Clean';
 contact = {
-    phone: '+91 98765 43210',
+    phone: '+91 839 085 2369',
     email: 'contact@sanskrutienterprises.com',
-    address: '123 Green Street, Pune, India'
+    address: 'House No 110 B,Zadani,Vavoshi,Tal-Khalapur, Dist-Raigad Maharashtra 410203'
   };
   services: Service[] = [
     {
