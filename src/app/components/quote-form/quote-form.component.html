@@ -1,0 +1,9 @@
+<div class="p-6 max-w-md mx-auto">
+  <h2 class="text-xl font-bold mb-4">Request a Quote</h2>
+  <form #quoteForm="ngForm" (ngSubmit)="submitQuote()">
+    <input type="text" name="name" ngModel placeholder="Your Name" class="border p-2 w-full mb-3" required>
+    <input type="email" name="email" ngModel placeholder="Your Email" class="border p-2 w-full mb-3" required>
+    <textarea name="details" ngModel placeholder="Service Details" class="border p-2 w-full mb-3" required></textarea>
+    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Submit</button>
+  </form>
+</div>

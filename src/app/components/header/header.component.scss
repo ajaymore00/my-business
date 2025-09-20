@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .company-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  .menu-buttons button {
+    margin-left: 15px;
+    font-weight: 500;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+}
