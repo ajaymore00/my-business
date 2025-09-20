@@ -24,22 +24,22 @@ contact = {
     {
       title: 'Grass Cutting',
       description: 'We provide precise and professional lawn mowing services to keep your garden fresh and healthy.',
-      image: '../../../assets/grassCutting.jpg'
+      image: 'assets/grassCutting.jpg'
     },
     {
       title: 'Gardening',
       description: 'Planting, trimming, and complete garden maintenance for a beautiful outdoor space.',
-      image: '../../../assets/gardening.jpg'
+      image: 'assets/gardening.jpg'
     },
     {
       title: 'Tree Cutting',
       description: 'Safe and expert tree trimming and removal services for your property.',
-      image: '../../../assets/treeCutting.jpg'
+      image: 'assets/treeCutting.jpg'
     },
     {
       title: 'Plant Care',
       description: 'From watering to fertilizing, we ensure your plants thrive every season.',
-      image: '../../../assets/plantCare.jpg'
+      image: 'assets/plantCare.jpg'
     }
   ];
 }
