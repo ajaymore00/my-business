@@ -1,32 +1,55 @@
+ 
+<app-header></app-header>
 <div class="container">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>{{ businessName }}</h1>
-      <p>{{ tagline }}</p>
-      <a href="#contact" class="btn">Contact Us</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero" >
+        <div class="hero-content">
+            <h1>{{ businessName }}</h1>
+            <p>{{ tagline }}</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </section>
 
-  <!-- Services Section -->
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card" *ngFor="let service of services">
-        <img [src]="service.image" [alt]="service.title" />
-        <h3>{{ service.title }}</h3>
-        <p>{{ service.description }}</p>
-      </div>
-    </div>
-  </section>
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>{{ aboutText }}</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card" *ngFor="let service of services">
+                <img [src]="service.image" [alt]="service.title" />
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+                <p>{{ tagline }}</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card" *ngFor="let t of testimonials">
+                <p>"{{ t.feedback }}"</p>
+                <strong>- {{ t.name }}</strong>
+            </div>
+        </div>
+    </section>
 
     <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-info">
-      <p><strong>Phone:</strong> {{ contact.phone }}</p>
-      <p><strong>Email:</strong> {{ contact.email }}</p>
-      <p><strong>Address:</strong> {{ contact.address }}</p>
-    </div>
-  </section>
-  
-  </div>
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>📞 Phone:</strong> {{ contact.phone }}</p>
+            <p><strong>📧 Email:</strong> {{ contact.email }}</p>
+            <p><strong>📍 Address:</strong> {{ contact.address }}</p>
+            <p><strong>⏰ Working Hours:</strong> {{ contact.hours }}</p>
+            <br>
+            <a href="tel:{{ contact.phone }}" class="btn">Call Now</a> &nbsp;
+            <a [href]="contact.whatsappLink" target="_blank" class="btn">Chat on WhatsApp</a>
+        </div>
+    </section>
+
+</div>

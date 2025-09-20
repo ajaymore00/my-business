@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="header">
+<mat-toolbar   class="header">
   <div class="logo-section">
     <img src="assets/logo.png" alt="Company Logo" class="logo">
     <span class="company-name">Sanskruti Enterprises</span>
@@ -6,8 +6,7 @@
   <span class="spacer"></span>
 
   <!-- Desktop Menu Buttons -->
-  <div class="menu-buttons">
-    <button mat-button routerLink="/#contact">Contact Us</button>
+  <div class="menu-buttons"> 
     <button mat-raised-button color="accent" routerLink="/quote">Get Quote</button>
   </div>
 
@@ -16,9 +15,12 @@
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/#contact">Contact Us</button>
-      <button mat-menu-item routerLink="/quote">Get Quote</button>
+    <mat-menu #menu="matMenu">  
+    <button mat-menu-item><a href="#about">About</a></button>
+    <button mat-menu-item><a href="#services">Services</a></button>
+    <button mat-menu-item><a href="#gallery">Gallery</a></button>
+    <button mat-menu-item><a href="#testimonials">Testimonials</a></button>
+    <button mat-menu-item><a href="#contact">Contact</a></button>
     </mat-menu>
   </div>
 </mat-toolbar>
