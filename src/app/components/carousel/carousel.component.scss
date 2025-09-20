@@ -1,0 +1,50 @@
+:host { display: block; width: 100%; }
+.carousel {
+position: relative;
+width: 100%;
+max-width: 100%;
+aspect-ratio: 16 / 9;
+overflow: hidden;
+border-radius: 10px;
+background: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.slides {
+position: relative;
+width: 100%;
+height: 100%;
+}
+.slide {
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
+opacity: 0;
+transform: translateX(10%);
+transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.slide img {
+width: 100%; height: 100%;
+object-fit: cover;
+display: block;
+}
+.slide.active {
+opacity: 1;
+transform: translateX(0);
+z-index: 2;
+}
+.caption {
+position: absolute;
+left: 0.5rem;
+right: 0.5rem;
+bottom: 0.5rem;
+background: rgba(0,0,0,0.45);
+color: white;
+padding: 0.5rem;
+border-radius: 6px;
+font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+.control {
+position: absolute;
+}

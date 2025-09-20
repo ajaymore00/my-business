@@ -1,16 +1,32 @@
-<div class="p-6 text-center">
-  <h2 class="text-2xl font-bold mb-4">Welcome to GreenCare Services</h2>
-  <p class="mb-4">We provide professional Grass Cutting and Tree Cutting services.</p>
+<div class="container">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>{{ businessName }}</h1>
+      <p>{{ tagline }}</p>
+      <a href="#contact" class="btn">Contact Us</a>
+    </div>
+  </section>
 
-  <!-- Image Slider -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <img src="assets/grass1.jpg" alt="Grass Cutting" class="w-full h-64 object-cover rounded-lg shadow">
-    <img src="assets/tree1.jpg" alt="Tree Cutting" class="w-full h-64 object-cover rounded-lg shadow">
-  </div>
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card" *ngFor="let service of services">
+        <img [src]="service.image" [alt]="service.title" />
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="mt-6">
-    <a routerLink="/quote" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
-      Request a Quote
-    </a>
+    <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> {{ contact.phone }}</p>
+      <p><strong>Email:</strong> {{ contact.email }}</p>
+      <p><strong>Address:</strong> {{ contact.address }}</p>
+    </div>
+  </section>
+  
   </div>
-</div>

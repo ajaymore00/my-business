@@ -1,0 +1,13 @@
+/* filepath: c:\Sanskruti\my-business\business-website\src\app\app.component.scss */
+.wrap-content {
+  height: calc(94vh - 52px);
+
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    height: calc(92vh - 52px); /* Adjust height for tablets */
+  }
+
+  @media (max-width: 480px) {
+    height: calc(90vh - 52px); /* Adjust height for mobile devices */
+  }
+}

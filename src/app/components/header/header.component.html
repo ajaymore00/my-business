@@ -1,11 +1,24 @@
 <mat-toolbar color="primary" class="header">
   <div class="logo-section">
-    <img src="assets/logo.png" alt="Company Logo" class="logo">
-    <span class="company-name">GreenCare Services</span>
+    <img src="../../../assets/logo.png" alt="Company Logo" class="logo">
+    <span class="company-name">Sanskruti Enterprises</span>
   </div>
   <span class="spacer"></span>
+
+  <!-- Desktop Menu Buttons -->
   <div class="menu-buttons">
     <button mat-button routerLink="/contact">Contact Us</button>
     <button mat-raised-button color="accent" routerLink="/quote">Get Quote</button>
+  </div>
+
+  <!-- Mobile Menu Icon -->
+  <div class="mobile-menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/contact">Contact Us</button>
+      <button mat-menu-item routerLink="/quote">Get Quote</button>
+    </mat-menu>
   </div>
 </mat-toolbar>

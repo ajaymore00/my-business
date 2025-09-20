@@ -1,3 +1,4 @@
+/* filepath: c:\Sanskruti\my-business\business-website\src\app\components\header\header.component.scss */
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,24 +10,43 @@
     align-items: center;
 
     .logo {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
+      height: 50px;
+      width: auto;
+      margin-right: 0.5rem;
     }
 
     .company-name {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
     }
   }
 
-  .menu-buttons button {
-    margin-left: 15px;
-    font-weight: 500;
+  .spacer {
+    flex: 1;
   }
 
-  .spacer {
-    flex: 1 1 auto;
+  .menu-buttons {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      font-size: 1rem;
+    }
+  }
+
+  .mobile-menu {
+    display: none; /* Hidden by default */
+  }
+
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .menu-buttons {
+      display: none; /* Hide desktop buttons on mobile */
+    }
+
+    .mobile-menu {
+      display: block; /* Show mobile menu icon */
+    }
   }
 }

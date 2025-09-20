@@ -1,7 +1,35 @@
+/* filepath: c:\Sanskruti\my-business\business-website\src\app\components\footer\footer.component.scss */
 .footer {
-    height: 45px;
-    background: #424242;
-    color: white;
-    text-align: center;
-    padding: 6px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+
+  span {
+    max-width: 90%;
+    word-wrap: break-word;
+  }
+
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+
+    span {
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+
+    span {
+      font-size: 0.8rem;
+    }
+  }
 }

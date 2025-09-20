@@ -1,0 +1,25 @@
+<div class="carousel" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"
+(touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+<div class="slides">
+<ng-container *ngFor="let s of slides; let i = index">
+<figure class="slide" [class.active]="i === current">
+<img [src]="s.src" [alt]="s.alt || s.title || 'slide ' + i" />
+<figcaption *ngIf="s.title || s.description" class="caption">
+<h3 *ngIf="s.title">{{ s.title }}</h3>
+<p *ngIf="s.description">{{ s.description }}</p>
+</figcaption>
+</figure>
+</ng-container>
+</div>
+
+
+<button *ngIf="showControls" class="control prev" (click)="prev()">◀</button>
+<button *ngIf="showControls" class="control next" (click)="next()">▶</button>
+
+
+<ol *ngIf="showIndicators" class="indicators">
+<li *ngFor="let _ of slides; let i = index" [class.active]="i === current">
+<button (click)="goTo(i)"></button>
+</li>
+</ol>
+</div>
